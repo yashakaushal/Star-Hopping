@@ -10,7 +10,7 @@ from mpld3 import plugins,utils
 
 
 #reading catalog and dropping nan values
-star_cat = pd.read_csv("/Users/yashakaushal/Documents/summer_project/Star-Hopping/data_webscraping.csv")
+star_cat = pd.read_csv("basic_interface_files/data_webscraping.csv")  #required database path 
 star_cat = star_cat.dropna(subset=["spect","mag"])
 
 #reading columns
@@ -73,7 +73,7 @@ ax.set_facecolor('black')
 ax.grid(alpha=0.3)
 ax.set_xlabel("RA", size =20)
 ax.set_ylabel("DEC", size =20)
-plt.savefig("test1.png")
+plt.savefig("basic_interface_files/test1.png")   #output stored in this folder
 
 mpld3.show()
 
