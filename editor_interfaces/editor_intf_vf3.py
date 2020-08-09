@@ -157,10 +157,9 @@ class ClickInfo(plugins.PluginBase):
 
     // 3. Add event handler
     button.addEventListener ("click", function() {
-      var str = hops_list.slice(0,-39);
-      var del_hop_str = hops_list.slice(-39);
-      var del_hop = del_hop_str.split("  ")[1]
-      hops_list = str;
+      var str = hops_list.split(" ");
+      var del_hop = str[str.length - 1]
+      hops_list = str.slice(0,str.length-1).join(' ');
       alert("Last Hop-Click Deleted " + del_hop);
       button2.innerHTML = "Deleted Hop: " + del_hop ; 
     });
